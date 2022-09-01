@@ -1,0 +1,48 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+
+<div class="col-lg-5 mx-auto shadow p-0 mt-4">
+    <div class="alert alert-success">
+        <h2 class="text-center">ADD EMPLOYEE</h2>
+
+    </div>
+    <div class="p-2 newImg">
+        <form method="POST" action="{% url 'add_emp' %}">
+            {% csrf_token %}
+            <table class="table">
+                <tr>
+                    <td>Employee Name:</td>
+                    <td><input type="text" name="ename" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td><input type="text" name="econtact" id="" required>
+
+
+                        <td>
+                            {% if m %}
+
+                            <span style="color:red;">{{m}}</span> {% endif %}
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email Department:</td>
+                    <td><input type="text" name="eemail" id="" required></td>
+                    <td>
+                        {% if e %}
+                        <span style="color:red">{{e}}</span> {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add Employee" class="btn btn-dark"></td>
+                </tr>
+            </table>
+
+        </form>
+
+
+    </div>
+
+</div>
+{% endblock content %}

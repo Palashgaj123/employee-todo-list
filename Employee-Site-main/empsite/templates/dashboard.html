@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+
+<h3 class="text-dark text-center bg mt-3">Employee Details</h3>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Email Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+
+                <th>{{i.emp_name}}</th>
+                <th>{{i.emp_contact}}</th>
+                <th>{{i.emp_email}}</th>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+<a href="{% url 'add_emp' %}"><button type="button" class="btn btn-dark">Add Employee</button></a> {% endblock content %}

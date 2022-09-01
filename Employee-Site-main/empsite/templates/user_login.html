@@ -1,0 +1,27 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+
+<div class="col-lg-4 mx-auto  p-0 mt-4">
+
+    <div class="alert alert-dark">
+
+        <h2 class="text-center">Login Here</h2>
+
+    </div>
+    <div class="p-4 newImg">
+        <form method="POST" action="{% url 'user_login' %}">
+            {% csrf_token %}
+            <table class="table">
+                {{form}}
+
+            </table>
+            <input type="submit" value="login" class="btn btn-dark">
+
+
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock content %}

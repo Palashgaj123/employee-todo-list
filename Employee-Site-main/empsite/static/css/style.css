@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: url('../images/emp.jpg') no-repeat;
+    background-size: 100%;
+    color: white;
+    height: 100%;
+    padding: 100px 0 0 0;
+}
+
+.newImg {
+    /* background: url('../images/emp.jpg') no-repeat; */
+    /* background-size: 100%; */
+    padding-top: 5px;
+    background-color: rgb(152, 156, 155);
+}
+
+.navi {
+    overflow: hidden;
+    background-color: rgb(242, 246, 250);
+}
+
+.table {
+    color: rgb(12, 12, 12);
+}

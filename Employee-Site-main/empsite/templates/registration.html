@@ -1,0 +1,30 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<div class="col-lg-6 mx-auto shadow p-0 mt-2">
+    <div class="alert alert-dark mb-2 mt-0">
+        <h2 class="text-center">Registration</h2>
+
+    </div>
+    <div class="p-4 newImg">
+
+        <form method="POST" action="{% url 'registration' %}">
+            {% csrf_token %}
+            <div class="container">
+                <table class="table"> {{form}}</table>
+
+
+
+                </br><input type="submit" value="login" class="btn btn-dark">
+
+            </div>
+
+
+
+
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock content %}
